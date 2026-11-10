@@ -1,0 +1,11 @@
+pa_id,name,state,designation,latitude,longitude,area_km2,area_basis,established,ecosystem,fire_profile
+BAN,Bandipur,Karnataka,Tiger Reserve / National Park,11.6667,76.6333,912,Tiger reserve area,1974,Dry and moist deciduous forest,high
+NAG,Nagarahole,Karnataka,Tiger Reserve / National Park,12.0500,76.1500,643,National park area,1988,Moist deciduous forest,medium
+COR,Jim Corbett,Uttarakhand,Tiger Reserve / National Park,29.5300,78.7747,521,National park core area,1936,Sal forest and grassland,high
+RAN,Ranthambore,Rajasthan,Tiger Reserve / National Park,26.0173,76.5026,392,National park area,1980,Dry deciduous forest,medium
+SIM,Similipal,Odisha,Tiger Reserve / National Park,21.8300,86.3300,845,National park area,1980,Moist deciduous sal forest,high
+KAZ,Kaziranga,Assam,Tiger Reserve / National Park,26.5775,93.1711,430,National park area (original),1974,Floodplain grassland and wetland,low
+KAN,Kanha,Madhya Pradesh,Tiger Reserve / National Park,22.3345,80.6115,940,Core zone area,1955,Sal forest and meadows,high
+GIR,Gir,Gujarat,National Park and Wildlife Sanctuary,21.1243,70.8242,1412,National park plus sanctuary area,1965,Dry deciduous forest and scrub,medium
+PER,Periyar,Kerala,Tiger Reserve,9.4667,77.2333,925,Tiger reserve area,1978,Tropical evergreen and moist deciduous forest,low
+SUN,Sundarbans,West Bengal,Tiger Reserve / National Park,21.9497,88.9000,1330,National park area,1984,Mangrove forest,low

@@ -1,0 +1,11 @@
+streamlit>=1.48
+pandas>=2.1
+numpy>=1.26
+plotly>=5.20
+folium>=0.17
+streamlit-folium>=0.22
+shapely>=2.0
+requests>=2.31
+python-dotenv>=1.0
+pytest>=8.0
+# Optional: geopandas (only needed if you extend boundary processing; not required to run)

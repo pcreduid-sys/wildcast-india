@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WILDCAST INDIA — Wildlife & Environmental Intelligence</title>
+<meta name="description" content="Habitat stress, water intelligence and documented biodiversity for ten pilot protected areas in India.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+<style>
+  :root { --bg:#101A18; --bar:#15231F; --card:#1B2C27; --border:#2A4038; --green:#6FAF83; --text:#F1F4F2; --muted:#9DB0A8; --yellow:#E5B65B; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; height:100%; background:var(--bg); color:var(--text);
+    font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif; }
+  header { height:52px; display:flex; align-items:center; justify-content:space-between; padding:0 18px;
+    background:var(--bar); border-bottom:1px solid var(--border); }
+  .brand { font-weight:700; letter-spacing:.02em; font-size:1.05rem; }
+  .brand span { color:var(--green); }
+  .tag { color:var(--muted); font-size:.8rem; margin-left:12px; }
+  a.btn { color:var(--text); text-decoration:none; font-size:.85rem; border:1px solid var(--border);
+    padding:6px 12px; border-radius:8px; background:var(--card); }
+  a.btn:hover { border-color:var(--green); }
+  main { position:relative; height:calc(100% - 52px); }
+  iframe { width:100%; height:100%; border:0; display:block; background:var(--bg); }
+  .overlay { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; padding:24px; }
+  .card { max-width:620px; background:var(--card); border:1px solid var(--border); border-radius:14px; padding:28px; line-height:1.55; }
+  .card h1 { margin:0 0 8px; font-size:1.35rem; }
+  .muted { color:var(--muted); font-size:.9rem; }
+  code { background:#0E1714; padding:2px 6px; border-radius:5px; color:var(--yellow); }
+  .spinner { width:34px; height:34px; border:3px solid var(--border); border-top-color:var(--green); border-radius:50%;
+    animation:spin 1s linear infinite; margin:0 auto 14px; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+  @media (max-width:640px) { .tag { display:none; } }
+</style>
+</head>
+<body>
+<header>
+  <div><span class="brand">🌿 WILDCAST <span>INDIA</span></span><span class="tag">Wildlife & environmental intelligence for India's protected areas</span></div>
+  <a class="btn" id="open" href="#" target="_blank" rel="noopener">Open full screen ↗</a>
+</header>
+<main>
+  <div class="overlay" id="loading">
+    <div class="card" style="text-align:center">
+      <div class="spinner"></div>
+      <h1>Starting the dashboard…</h1>
+      <p class="muted">The app runs on a free Python host and may take up to a minute to wake if nobody has used it
+        recently. If it shows a <b>“wake up”</b> button, click it.</p>
+    </div>
+  </div>
+  <iframe id="app" title="WILDCAST INDIA dashboard" allow="clipboard-write; fullscreen"></iframe>
+</main>
+<script>
+  // ── The only line to edit: paste your Streamlit app address (e.g. https://wildcast-india.streamlit.app) ──
+  const APP_URL = "PASTE_YOUR_STREAMLIT_APP_URL_HERE";
+
+  const frame = document.getElementById("app"), loading = document.getElementById("loading"), open = document.getElementById("open");
+  if (!/^https:\/\//.test(APP_URL)) {
+    frame.remove(); open.style.display = "none";
+    loading.innerHTML = `<div class="card"><h1>Almost there</h1>
+      <p>This Netlify page shows the WILDCAST INDIA app that runs on Streamlit Community Cloud (or Render).</p>
+      <p class="muted">To finish setup, open <code>index.html</code>, replace <code>PASTE_YOUR_STREAMLIT_APP_URL_HERE</code>
+      with your app's address (for example <code>https://wildcast-india.streamlit.app</code>) and re-deploy this folder to Netlify.</p></div>`;
+  } else {
+    const base = APP_URL.replace(/\/+$/, "");
+    open.href = base;
+    // ?embed=true removes Streamlit Cloud's outer toolbar when shown inside another site
+    frame.src = base + (/streamlit\.app/.test(base) ? "/?embed=true&embed_options=dark_theme" : "/");
+    frame.addEventListener("load", () => setTimeout(() => loading.remove(), 400));
+    setTimeout(() => loading && loading.remove(), 60000);
+  }
+</script>
+</body>
+</html>

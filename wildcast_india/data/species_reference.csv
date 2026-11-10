@@ -1,0 +1,4 @@
+scientific_name,common_name,taxon_group,kingdom,phylum,class_name,order_name,family,iucn_category,iucn_assessment_year,iucn_source
+Panthera tigris,Tiger,Mammals,Animalia,Chordata,Mammalia,Carnivora,Felidae,EN,2022,IUCN Red List (reference; refresh via IUCN connector)
+Panthera leo,Lion (Asiatic lion in Gir),Mammals,Animalia,Chordata,Mammalia,Carnivora,Felidae,VU,2023,IUCN Red List (reference; species-level assessment; refresh via IUCN connector)
+Rhinoceros unicornis,Greater one-horned rhinoceros,Mammals,Animalia,Chordata,Mammalia,Perissodactyla,Rhinocerotidae,VU,2018,IUCN Red List (reference; refresh via IUCN connector)

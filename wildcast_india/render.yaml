@@ -1,0 +1,17 @@
+# Optional alternative to Streamlit Community Cloud: deploy on Render (https://render.com) as a Blueprint.
+services:
+  - type: web
+    name: wildcast-india
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: FIRMS_MAP_KEY
+        sync: false
+      - key: EBIRD_API_KEY
+        sync: false
+      - key: IUCN_API_TOKEN
+        sync: false
